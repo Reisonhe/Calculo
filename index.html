@@ -68,6 +68,7 @@ function calcular() {
   const noventaPorcento = valor * 0.10;
   const economia = valor * 0.90;
   const econoGeral = valor - (noventaPorcento + vintePorcento);
+  const valorGr = vintePorcento + noventaPorcento;
 
   const formatter = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -82,7 +83,9 @@ function calcular() {
     <br> Proposta de 90%: <br> ${formatter.format(noventaPorcento)} <br>
     <br> --- CLIENTE IRA ECONOMIZAR --- <br>
     <br> Da Liquidação da divida: <br> ${formatter.format(economia)} <br>
-    <br> Do Geral <br> ${formatter.format(econoGeral)} <br>`;
+    <br> Do Geral <br> ${formatter.format(econoGeral)} <br>
+    <br> --- VALOR GERAL --- <br>
+    <br> Laudo + Quitação Final: <br> ${formatter.format(valorGr)} <br>`;
 }
 </script>
 
